@@ -2,7 +2,7 @@
 resource "aws_s3_bucket" "dl-zone" {
   bucket = "${var.zone_bucket_name}"
   acl = "${var.bucket_acl}"
-  provider = "${var.provider}"
+  provider = "aws.default"
 
   server_side_encryption_configuration {
     "rule" {
