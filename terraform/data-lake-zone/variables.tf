@@ -11,3 +11,8 @@ variable "region" {}
 variable "provider" {
   default = "aws.default"
 }
+
+variable "lambda_function_arn" {}
+variable "zone_events" {
+  type="list"
+}

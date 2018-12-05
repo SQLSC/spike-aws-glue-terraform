@@ -1,6 +1,6 @@
 .idea
 .terraform
+venv
 *.tfstate.backup
 *.tfstate
 *.tfvars
-
