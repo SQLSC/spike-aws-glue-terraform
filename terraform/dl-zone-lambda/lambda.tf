@@ -1,4 +1,5 @@
 resource "aws_lambda_function" "default_lambda" {
+  provider = "aws.default"
   function_name = "${var.lambda_name}"
   handler = "${var.lambda_handler}"
   role = "${aws_iam_role.lambda_role.arn}"
@@ -8,6 +9,7 @@ resource "aws_lambda_function" "default_lambda" {
 }
 
 resource "aws_lambda_permission" "default_lambda_permission" {
+  provider = "aws.default"
   statement_id = "${var.statement_id}"
   action = "${var.lambda_action}"
   function_name = "${aws_lambda_function.default_lambda.function_name}"

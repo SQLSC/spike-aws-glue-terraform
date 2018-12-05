@@ -6,6 +6,7 @@ module "kms" {
 
 module "raw-data-lambda" {
   source = "dl-zone-lambda"
+  region = "${var.region}"
   lambda_role_name = "${var.role_name}"
   lambda_name = "${var.lambda_name}"
   lambda_handler = "${var.handler}"
@@ -15,6 +16,7 @@ module "raw-data-lambda" {
   lambda_action = "${var.lambda_action}"
   principal = "${var.principal}"
   source_arn = "${module.raw-data-zone.zone_arn}"
+  policy_name = "${var.lambda_aim_policy_name}"
 }
 
 module "raw-data-zone" {

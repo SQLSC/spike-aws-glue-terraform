@@ -13,3 +13,4 @@ variable "principal" {}
 variable "zone_events" {
   type = "list"
 }
+variable "lambda_aim_policy_name" {}
